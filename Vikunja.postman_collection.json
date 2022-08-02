@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "e9f9cda0-286e-4acd-9e95-0a8a958eb219",
+		"name": "Vikunja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21775698"
+	},
+	"item": [
+		{
+			"name": "post/логин",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"{{username}}\",\r\n    \"password\": \"{{password}}\",\r\n    \"long_token\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/login",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post/регистрация",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"{{$randomUserName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://try.vikunja.io/api/v1/register",
+					"protocol": "https",
+					"host": [
+						"try",
+						"vikunja",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://apichallenges.herokuapp.com/challenger",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"// любой комментарий\r",
+							"//создание константы\r",
+							"const dog = 2;\r",
+							"\r",
+							"//создание переменной\r",
+							"let dogName = \"Bond\";\r",
+							"\r",
+							"//Использование консоли\r",
+							"console.log(\"Немножко автотестов\"); \r",
+							"console.info(\"Немножко автотестов\"); \r",
+							"console.warn(\"Немножко автотестов\"); \r",
+							"console.error(\"Немножко автотестов\");\r",
+							"console.log(dog); \r",
+							"console.info(dogName); "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://apichallenges.herokuapp.com/challenger",
+					"protocol": "https",
+					"host": [
+						"apichallenges",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"challenger"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

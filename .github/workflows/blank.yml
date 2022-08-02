@@ -25,5 +25,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - uses: matt-ball/newman-action@v1.0.4
-        wiht:
+        with:
           collection: Vikunja.postman_collection.json

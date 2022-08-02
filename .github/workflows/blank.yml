@@ -27,4 +27,4 @@ jobs:
       - name: Newman Action
       - uses: matt-ball/newman-action@v1.0.4
         wiht
-        collection: Vikunja.postman_collection.json
+          collection: Vikunja.postman_collection.json
